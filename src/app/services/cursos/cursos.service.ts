@@ -39,7 +39,7 @@ export class CursosService {
       const cursoRef = doc(this.firestore, "cursos", curso.id.toString());
       return setDoc(cursoRef, curso, {merge: true});
     }
-    deleteProduct(id: number) {
+    deleteCurso(id: number) {
       const cursoRef = doc(this.firestore, "products", id.toString());
       return deleteDoc(cursoRef);
     }

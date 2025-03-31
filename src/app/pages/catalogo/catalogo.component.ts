@@ -30,10 +30,10 @@ constructor(private router : Router,
       this.curso = cursos;
     })
   }
-  deleteProduct(event: Event, id: number) {
+  deleteCurso(event: Event, id: number) {
     event.stopPropagation();
-    this.cursoService.deleteProduct(id)
-      .then(() => console.log("Producto eliminado con exito"))
+    this.cursoService.deleteCurso(id)
+      .then(() => console.log("curso eliminado"))
       .catch(err => console.log(err));
   }
 
