@@ -1,0 +1,23 @@
+
+<h1>Bienvenido, selecciona un curso :</h1>
+
+
+<div class="row justify-content-center">
+  @for(cr of curso; track $index){
+    <div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"> {{cr.curso}} </h5>
+          <p class="card-text"> {{cr.descripcion}} </p>
+          <a (click)="goToCurso(cr.id)" class="btn btn-primary">
+             
+                Ir al curso
+              
+          </a>
+          <a [routerLink]="['/reproductor', cr.id]" class="btn btn-success">Actualizar</a>
+          <a (click)="deleteProduct($event, cr.id)" class="btn btn-danger">Eliminar</a>
+        </div>
+      </div>
+    </div>
+  }
+</div>
