@@ -28,5 +28,11 @@ export class LoginComponent {
       })
     }
   }
+  registerWithGoogle(){
+    this.authservice.loginWithGoogle()
+      .then(()=> console.log("google"))
+      .catch(err => console.log(err));
+
+  }
 
 }
